@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import Video from './Video';
 
 const PizzaGridStyles = styled.div`
   display: grid;
@@ -26,6 +27,7 @@ const PizzaStyles = styled.div`
 `;
 
 function SinglePizza({ pizza }) {
+  console.log('pizza', pizza);
   return (
     <PizzaStyles>
       <Link to={`/pizza/${pizza.slug.current}`}>
@@ -34,7 +36,8 @@ function SinglePizza({ pizza }) {
         </h2>
       </Link>
       <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
-      <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
+      {/* <Img fluid={pizza.image.asset.fluid} alt={pizza.name} /> */}
+      <Video videoUrl={pizza.videoUrl} videoName={pizza.name} />
     </PizzaStyles>
   );
 }
