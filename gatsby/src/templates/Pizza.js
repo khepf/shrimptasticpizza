@@ -3,6 +3,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
+import Video from '../components/Video';
 
 const PizzaGrid = styled.div`
   display: grid;
@@ -15,7 +16,8 @@ export default function SinglePizzaPage({ data: { pizza } }) {
     <>
       <SEO title={pizza.name} image={pizza.image?.asset?.fluid?.src} />
       <PizzaGrid>
-        <Img fluid={pizza.image.asset.fluid} />
+        {/* <Img fluid={pizza.image.asset.fluid} /> */}
+        <Video videoUrl={pizza.videoUrl} videoName={pizza.name} />
         <div>
           <h2 className="mark">{pizza.name}</h2>
           <ul>
@@ -42,6 +44,8 @@ export const query = graphql`
           }
         }
       }
+      description
+      videoUrl
       toppings {
         name
         id

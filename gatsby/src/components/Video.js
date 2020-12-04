@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Video = ({ videoUrl, videoName, ...props }) => (
-   <>
-   <h2>{videoUrl}HHHHHHHH</h2>
-<div className="video">
+  <div className="video">
     <iframe
       src={videoUrl}
       title={videoName}
@@ -14,7 +12,5 @@ const Video = ({ videoUrl, videoName, ...props }) => (
       allowFullScreen
     />
   </div>
-   </> 
-  
-)
+);
 export default Video;
