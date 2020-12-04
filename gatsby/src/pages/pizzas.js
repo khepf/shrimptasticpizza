@@ -6,7 +6,6 @@ import SEO from '../components/SEO';
 
 export default function PizzasPage({ data, pageContext }) {
   const pizzas = data.pizzas.nodes;
-  console.log('pageContext', pageContext);
   return (
     <>
       <SEO
