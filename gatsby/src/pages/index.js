@@ -10,7 +10,7 @@ function CurrentlySlicing({ slicemasters }) {
       <h2 className="center">
         <span className="mark tilt">Slicemasters On</span>
       </h2>
-      <p>Standing by, ready to slice you up!</p>
+      <p>Standing By, Waiting For Your Order!</p>
       {!slicemasters && <LoadingGrid count={4} />}
       {slicemasters && !slicemasters?.length && (
         <p>No one is working right now!</p>
@@ -25,9 +25,9 @@ function HotSlices({ hotSlices }) {
       <h2 className="center">
         <span className="mark tilt">Hot Slices</span>
       </h2>
-      <p>Come on by, buy the slice!</p>
+      <p>Whole Pies, Or By The Slice!</p>
       {!hotSlices && <LoadingGrid count={4} />}{' '}
-      {hotSlices && !hotSlices?.length && <p>Nothin' in the Case</p>}
+      {hotSlices && !hotSlices?.length && <p>Out of Pizzas!</p>}
       {hotSlices?.length && <ItemGrid items={hotSlices} />}
     </div>
   );
@@ -38,7 +38,7 @@ export default function HomePage() {
 
   return (
     <div className="center">
-      <h1>The Best Pizza Downtown!</h1>
+      <h1>The Best Pizza By The Beach!</h1>
       <p>Open 11am to 11pm Every Single Day</p>
       <HomePageGrid>
         <CurrentlySlicing slicemasters={slicemasters} />
