@@ -4,6 +4,11 @@ npm start
 make local changes then
 sanity deploy
 
+sanity graphql deploy production
+sanity hook create
+sanity graphql list
+
+
 GATSBY
 C:\Users\jerem\Desktop\PROJECTS\master-gatsby-master\master-gatsby-master\starter-files
 npm run netlify
