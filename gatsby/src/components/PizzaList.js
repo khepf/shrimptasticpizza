@@ -36,6 +36,7 @@ function SinglePizza({ pizza }) {
         </h2>
       </Link>
       <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
+
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
     </PizzaStyles>
   );

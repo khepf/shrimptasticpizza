@@ -13,6 +13,9 @@ const deets = `
         }
       }
     }
+    slug {
+      current
+    }
 `;
 
 export default function useLatestData() {
@@ -20,7 +23,7 @@ export default function useLatestData() {
   const [hotSlices, setHotSlices] = useState();
   // slicemasters
   const [slicemasters, setSlicemasters] = useState();
-  // Use a side effect to fetcht he data from the graphql endpoint
+  // Use a side effect to fetch the data from the graphql endpoint
   useEffect(function () {
     // when the component loads, fetch the data
     fetch(process.env.GATSBY_GRAPHQL_ENDPOINT, {

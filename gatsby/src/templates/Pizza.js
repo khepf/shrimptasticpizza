@@ -16,7 +16,6 @@ export default function SinglePizzaPage({ data: { pizza } }) {
     <>
       <SEO title={pizza.name} image={pizza.image?.asset?.fluid?.src} />
       <PizzaGrid>
-        {/* <Img fluid={pizza.image.asset.fluid} /> */}
         <Video videoUrl={pizza.videoUrl} videoName={pizza.name} />
         <div>
           <h2 className="mark">{pizza.name}</h2>

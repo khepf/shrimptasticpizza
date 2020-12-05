@@ -2,9 +2,10 @@ import React from 'react';
 import useLatestData from '../utils/useLatestData';
 import { HomePageGrid } from '../styles/Grids';
 import LoadingGrid from '../components/LoadingGrid';
-import ItemGrid from '../components/ItemGrid';
+import { ItemGridPeople, ItemGridPizzas} from '../components/ItemGrid';
 
 function CurrentlySlicing({ slicemasters }) {
+  console.log('slicemasters', slicemasters);
   return (
     <div>
       <h2 className="center">
@@ -15,11 +16,12 @@ function CurrentlySlicing({ slicemasters }) {
       {slicemasters && !slicemasters?.length && (
         <p>No one is working right now!</p>
       )}
-      {slicemasters?.length && <ItemGrid items={slicemasters} />}
+      {slicemasters?.length && <ItemGridPeople items={slicemasters} />}
     </div>
   );
 }
 function HotSlices({ hotSlices }) {
+  console.log('hotSlices', hotSlices);
   return (
     <div>
       <h2 className="center">
@@ -28,7 +30,7 @@ function HotSlices({ hotSlices }) {
       <p>Whole Pies, Or By The Slice!</p>
       {!hotSlices && <LoadingGrid count={4} />}{' '}
       {hotSlices && !hotSlices?.length && <p>Out of Pizzas!</p>}
-      {hotSlices?.length && <ItemGrid items={hotSlices} />}
+      {hotSlices?.length && <ItemGridPizzas items={hotSlices} />}
     </div>
   );
 }
