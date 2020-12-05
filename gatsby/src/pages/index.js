@@ -2,7 +2,7 @@ import React from 'react';
 import useLatestData from '../utils/useLatestData';
 import { HomePageGrid } from '../styles/Grids';
 import LoadingGrid from '../components/LoadingGrid';
-import { ItemGridPeople, ItemGridPizzas} from '../components/ItemGrid';
+import { ItemGridPeople, ItemGridPizzas } from '../components/ItemGrid';
 
 function CurrentlySlicing({ slicemasters }) {
   console.log('slicemasters', slicemasters);
