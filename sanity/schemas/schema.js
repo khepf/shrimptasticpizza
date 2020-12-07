@@ -5,15 +5,27 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // Then we give our schema to the builder and provide the result to Sanity
 
 import pizza from './pizza';
-import video from './video';
 import topping from './topping';
 import person from './person';
+import sauce from './sauce';
+import cheese from './cheese';
+import protein from './protein';
 import storeSettings from './storeSettings';
+import vegetables from './vegetables';
 
 export default createSchema({
   // We name our schema
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([pizza, video, topping, person, storeSettings]),
+  types: schemaTypes.concat([
+    pizza,
+    topping,
+    person,
+    sauce,
+    cheese,
+    protein,
+    vegetables,
+    storeSettings,
+  ]),
 });

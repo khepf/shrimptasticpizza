@@ -23,6 +23,11 @@ export default {
       },
     },
     {
+      title: 'Video URL',
+      name: 'videoUrl',
+      type: 'url',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
