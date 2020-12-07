@@ -27,7 +27,6 @@ const PizzaStyles = styled.div`
 `;
 
 function SinglePizza({ pizza }) {
-  console.log('pizza', pizza);
   return (
     <PizzaStyles>
       <Link to={`/pizza/${pizza.slug.current}`}>

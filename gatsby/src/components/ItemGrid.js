@@ -3,7 +3,6 @@ import React from 'react';
 import { ItemsGrid, ItemStyles } from '../styles/Grids';
 
 export function ItemGridPeople({ items }) {
-  console.log('items', items);
   return (
     <ItemsGrid>
       {items.map((item) => (
@@ -30,7 +29,6 @@ export function ItemGridPeople({ items }) {
 }
 
 export function ItemGridPizzas({ items }) {
-  console.log('items', items);
   return (
     <ItemsGrid>
       {items.map((item) => (
