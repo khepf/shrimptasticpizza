@@ -7,7 +7,7 @@ async function fetchBeersAndTurnIntoNodes({
   createContentDigest,
 }) {
   // fetch beers
-  const res = await fetch('https://sampleapis.com/beers/api/ale');
+  const res = await fetch('https://sampleapis.com/beers/api/red-ale');
   const beers = await res.json();
   // loop over each one
   for (const beer of beers) {
@@ -90,34 +90,6 @@ async function turnToppingsIntoPages({ graphql, actions }) {
   // 4. Pass topping data to pizza.js
 }
 
-// async function turnVideosIntoPages({ graphql, actions }) {
-//   // 1. get a template for this page
-//   const videoTemplate = path.resolve('./src/templates/Video.js');
-//   // 2. query all videos
-//   const { data } = await graphql(`
-//     query {
-//       videos: allSanityVideo {
-//         nodes {
-//           name
-//           slug {
-//             current
-//           }
-//         }
-//       }
-//     }
-//   `);
-//   // 3. Loop over each video and create a page for that pizza
-//   data.videos.nodes.forEach((video) => {
-//     actions.createPage({
-//       path: `video/${video.slug.current}`,
-//       component: videoTemplate,
-//       context: {
-//         slug: video.slug.current,
-//       },
-//     });
-//   });
-// }
-
 async function turnSlicemastersIntoPages({ graphql, actions }) {
   // 1. Query all slicemasters
   const { data } = await graphql(`
@@ -169,7 +141,6 @@ export async function createPages(params) {
   await Promise.all([
     turnPizzasIntoPages(params),
     turnToppingsIntoPages(params),
-    // turnVideosIntoPages(params),
     turnSlicemastersIntoPages(params),
   ]);
 }

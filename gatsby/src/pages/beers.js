@@ -25,6 +25,7 @@ const SingleBeerStyles = styled.div`
 `;
 
 export default function BeersPage({ data }) {
+  console.log('jmk data', data);
   return (
     <>
       <SEO title={`Beers! We have ${data.beers.nodes.length} in stock`} />
@@ -34,6 +35,7 @@ export default function BeersPage({ data }) {
       <BeerGridStyles>
         {data.beers.nodes.map((beer) => {
           const rating = Math.round(beer.rating.average);
+
           return (
             <SingleBeerStyles key={beer.id}>
               <img src={beer.image} alt={beer.name} />
