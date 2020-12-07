@@ -35,6 +35,10 @@ function SinglePizza({ pizza }) {
           <span className="mark">{pizza.name}</span>
         </h2>
       </Link>
+      <p>{pizza.sauces.map((sauce) => sauce.name).join(', ')}</p>
+      <p>{pizza.cheeses.map((cheese) => cheese.name).join(', ')}</p>
+      <p>{pizza.proteins.map((protein) => protein.name).join(', ')}</p>
+      <p>{pizza.vegetables.map((veggie) => veggie.name).join(', ')}</p>
       <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
 
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
