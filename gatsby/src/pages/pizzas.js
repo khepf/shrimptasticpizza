@@ -40,6 +40,25 @@ export const query = graphql`
           id
           name
         }
+        cheeses {
+          name
+          id
+          vegetarian
+        }
+        sauces {
+          name
+          id
+          vegetarian
+        }
+        proteins {
+          name
+          id
+          vegetarian
+        }
+        vegetables {
+          name
+          id
+        }
         image {
           asset {
             fixed(width: 600, height: 200) {
