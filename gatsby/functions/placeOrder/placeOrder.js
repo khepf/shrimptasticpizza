@@ -3,12 +3,12 @@ const nodemailer = require('nodemailer');
 function generateOrderEmail({ order, total }) {
   return `<div>
     <h2>Your Recent Order for ${total}</h2>
-    <p>Please start walking over, we will have your order ready in the next 20 mins.</p>
-    <ul>
+    <p>Please start walking over, we will have your order ready in the next 20 minutes.</p>
+    <ul style="list-style: none;">
       ${order
         .map(
           (item) => `<li>
-        <img src="${item.thumbnail}" alt="${item.name}"/>
+        <img src="${item.thumbnail}" alt="${item.name}" />
         ${item.size} ${item.name} - ${item.price}
       </li>`
         )
