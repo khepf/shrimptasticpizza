@@ -24,6 +24,9 @@ const PizzaStyles = styled.div`
   p {
     margin: 0;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 function SinglePizza({ pizza }) {
