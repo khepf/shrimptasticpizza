@@ -44,7 +44,6 @@ function HotSlices({ hotSlices }) {
 }
 
 export default function HomePage({ data }) {
-  console.log('daata', data.siteImages.nodes[0].image.asset.fluid);
   const { slicemasters, hotSlices } = useLatestData();
   const ytSubscribeImage = data.siteImages.nodes[0].image.asset.fluid;
   const spotifyLogo = data.siteImages.nodes[1].image.asset.fluid;
