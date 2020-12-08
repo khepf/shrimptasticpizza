@@ -12,6 +12,7 @@ import cheese from './cheese';
 import protein from './protein';
 import storeSettings from './storeSettings';
 import vegetables from './vegetables';
+import images from './siteImages';
 
 export default createSchema({
   // We name our schema
@@ -27,5 +28,6 @@ export default createSchema({
     protein,
     vegetables,
     storeSettings,
+    images,
   ]),
 });

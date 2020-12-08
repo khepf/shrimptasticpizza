@@ -1,6 +1,5 @@
 import { MdLocalPizza as icon } from 'react-icons/md';
 import PriceInput from '../components/PriceInput';
-import vegetables from './vegetables';
 
 export default {
   // computer name
