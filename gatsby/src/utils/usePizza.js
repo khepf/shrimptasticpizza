@@ -63,7 +63,9 @@ export default function usePizza({ pizzas, values }) {
     } else {
       // it worked!
       setLoading(false);
-      setMessage('Success! Come on down for your pizza');
+      setMessage(
+        'Success! Please wait 20 minutes, then come on down for your pizza!'
+      );
     }
   }
 

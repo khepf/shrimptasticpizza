@@ -14,7 +14,7 @@ function generateOrderEmail({ order, total }) {
         )
         .join('')}
     </ul>
-    <p>Your total is <strong>$${total}</strong> due at pickup</p>
+    <p>Your total is <strong>${total}</strong> due at pickup</p>
     <style>
         ul {
           list-style: none;
@@ -75,8 +75,8 @@ exports.handler = async (event, context) => {
 
   // send the email
   const info = await transporter.sendMail({
-    from: "Slick's Slices <slick@example.com>",
-    to: `${body.name} <${body.email}>, orders@example.com`,
+    from: 'Shrimptastic Pizza <shrimpy@shrimptastic.net>',
+    to: `${body.name} <${body.email}>, shrimpy@shrimptastic.net`,
     subject: 'New order!',
     html: generateOrderEmail({ order: body.order, total: body.total }),
   });
