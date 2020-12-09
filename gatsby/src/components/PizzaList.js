@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import Video from './Video';
 
 const PizzaGridStyles = styled.div`
   display: grid;
@@ -18,16 +17,21 @@ const PizzaStyles = styled.div`
     --rows: auto auto 1fr;
   }
   grid-template-rows: var(--rows, subgrid);
-  grid-row: span 3;
+  grid-row: span 2;
   grid-gap: 1rem;
   h2,
   p {
     margin: 0;
   }
-  a {
-    text-decoration: none;
-  }
 `;
+
+function toppingsOrNone(pizza, toppingCategory) {
+  const tops = pizza[toppingCategory].map((top) => top.name).join(', ');
+  if (pizza[toppingCategory].length > 0) {
+    return tops;
+  }
+  return 'none';
+}
 
 function SinglePizza({ pizza }) {
   return (
@@ -37,13 +41,13 @@ function SinglePizza({ pizza }) {
           <span className="mark">{pizza.name}</span>
         </h2>
       </Link>
-      <Link to={`/pizza/${pizza.slug.current}`}>
-        <p>{pizza.sauces.map((sauce) => sauce.name).join(', ')}</p>
-        <p>{pizza.cheeses.map((cheese) => cheese.name).join(', ')}</p>
-        <p>{pizza.proteins.map((protein) => protein.name).join(', ')}</p>
-        <p>{pizza.vegetables.map((veggie) => veggie.name).join(', ')}</p>
-        <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
-      </Link>
+      <div>
+        <p>Sauces: {toppingsOrNone(pizza, 'sauces')}</p>
+        <p>Cheeses: {toppingsOrNone(pizza, 'cheeses')}</p>
+        <p>Proteins: {toppingsOrNone(pizza, 'proteins')}</p>
+        <p>Veggies: {toppingsOrNone(pizza, 'vegetables')}</p>
+        <p>Other: {toppingsOrNone(pizza, 'toppings')}</p>
+      </div>
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
     </PizzaStyles>
   );

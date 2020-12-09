@@ -86,5 +86,3 @@ export const query = graphql`
     }
   }
 `;
-
-// https://www.youtube.com/channel/UCM32ubo9Glp_85PJNYt14kQ?sub_confirmation=1

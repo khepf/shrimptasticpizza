@@ -46,9 +46,9 @@ const NavStyles = styled.nav`
     @media (max-width: 800px) {
       font-size: 2rem;
     }
-    /* &[aria-current='page'] {
+    &[aria-current='page'] {
       color: var(--red);
-    } */
+    }
   }
   @media (max-width: 600px) {
     --columns: 4;

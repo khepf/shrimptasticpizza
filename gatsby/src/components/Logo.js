@@ -62,64 +62,62 @@ const LogoStyles = styled.div`
     display: inline-block;
     line-height: 1;
     transition: transform 0.3s;
-    &.S {
+    &.s {
       --translateX: -0.05;
     }
     &.h {
       --rotate: 2deg;
-      --scale: 1.4;
       --translateX: 0.05em;
       --translateY: -0.05em;
+      --scale: 0.8;
     }
     &.r {
-      --scale: 0.9;
+      --scale: 0.8;
       --translateY: -0.1em;
       --translateX: 0.1em;
     }
     &.i {
       --rotate: 3deg;
-      --scale: 0.9;
+      --scale: 0.8;
       --translateX: 0.1em;
-      --translateY: 0.23em;
     }
     &.m {
       --rotate: -12deg;
-      --scale: 1.2;
+      --scale: 0.8;
       --translateX: 0.06em;
     }
     &.p {
       --rotate: -12deg;
-      --scale: 1.2;
+      --scale: 0.8;
       --translateX: 0.06em;
     }
     &.t {
       --translateX: -0.05;
     }
     &.a {
+      --scale: 0.8;
       --rotate: 2deg;
-      --scale: 1.4;
       --translateX: 0.05em;
       --translateY: -0.05em;
     }
     &.s2 {
-      --scale: 0.9;
+      --scale: 0.8;
       --translateY: -0.1em;
       --translateX: 0.1em;
     }
     &.t2 {
       --rotate: 3deg;
-      --scale: 0.9;
+      --scale: 0.8;
       --translateX: 0.1em;
       --translateY: 0.23em;
     }
     &.i2 {
       --rotate: -12deg;
-      --scale: 1.2;
+      --scale: 0.8;
       --translateX: 0.06em;
     }
     &.c {
       --rotate: -12deg;
-      --scale: 1.2;
       --translateX: 0.06em;
     }
   }
@@ -132,7 +130,7 @@ export default function Logo() {
         <span className="est">EST 1975</span>
         <h1>
           <span className="slicks">
-            <span className="letter S">S</span>
+            <span className="letter s">S</span>
             <span className="letter h">h</span>
             <span className="letter r">r</span>
             <span className="letter i">i</span>

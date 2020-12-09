@@ -2,12 +2,17 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import SEO from '../components/SEO';
+import Video from '../components/Video';
 
 export default function SlicemasterPage({ data: { person } }) {
   return (
     <>
       <SEO title={person.name} image={person.image.asset.src} />
       <div className="center">
+      <h2>
+          <span className="mark">Now Appearing On:</span>
+        </h2>
+        <Video videoUrl={person.videoUrl} videoName={person.name} />
         <Img fluid={person.image.asset.fluid} />
         <h2>
           <span className="mark">{person.name}</span>
@@ -24,9 +29,10 @@ export const query = graphql`
       name
       id
       description
+      videoUrl
       image {
         asset {
-          fluid(maxWidth: 1000, maxHeight: 750) {
+          fluid(maxWidth: 500, maxHeight: 375) {
             ...GatsbySanityImageFluid
           }
         }
