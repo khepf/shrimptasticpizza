@@ -9,11 +9,11 @@ export default function SlicemasterPage({ data: { person } }) {
     <>
       <SEO title={person.name} image={person.image.asset.src} />
       <div className="center">
-      <h2>
+        <h2 style={{ margin: '10px' }}>
           <span className="mark">Now Appearing On:</span>
         </h2>
         <Video videoUrl={person.videoUrl} videoName={person.name} />
-        <Img fluid={person.image.asset.fluid} />
+        <Img fluid={person.image.asset.fluid} style={{ marginTop: '10px' }} />
         <h2>
           <span className="mark">{person.name}</span>
         </h2>

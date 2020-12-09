@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PizzaList from '../components/PizzaList';
-import ToppingsFilter from '../components/ToppingsFilter';
+// import ToppingsFilter from '../components/ToppingsFilter';
 import SEO from '../components/SEO';
 
 export default function PizzasPage({ data, pageContext }) {
@@ -15,7 +15,7 @@ export default function PizzasPage({ data, pageContext }) {
             : `All Pizzas`
         }
       />
-      <ToppingsFilter activeTopping={pageContext.topping} />
+      {/* <ToppingsFilter activeTopping={pageContext.topping} /> */}
       <PizzaList pizzas={pizzas} />
     </>
   );
