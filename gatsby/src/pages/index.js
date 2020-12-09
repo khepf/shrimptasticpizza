@@ -57,6 +57,7 @@ export default function HomePage({ data }) {
             style={{ height: '50px', width: '50px' }}
           />
         </a>
+        <h2>(513) 494-6777</h2>
         <a href="https://open.spotify.com/artist/6aOXJx6dF1oQ0GMGEYf5lJ?si=e726QwdPR2OenkU1gxwi9A">
           <Img fluid={spotifyLogo} style={{ height: '50px', width: '50px' }} />
         </a>
