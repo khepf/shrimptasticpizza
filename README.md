@@ -14,3 +14,5 @@ C:\Users\jerem\Desktop\PROJECTS\master-gatsby-master\master-gatsby-master\starte
 npm run netlify
 make local changes
 deploy to git from main area containing front and back end
+
+sendgrid

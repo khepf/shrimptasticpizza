@@ -9,6 +9,9 @@ const PizzaGrid = styled.div`
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(400px, ifr));
+  ul {
+    list-style: none;
+  }
 `;
 
 export default function SinglePizzaPage({ data: { pizza } }) {
